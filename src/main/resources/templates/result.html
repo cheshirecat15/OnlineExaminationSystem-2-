@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam Result</title>
+    <link rel="stylesheet" href="/dashboard.css"> <!-- Reuse same styling -->
+</head>
+<body>
+    <div class="container">
+        <h1>Exam Result</h1>
+        <h2 th:text="${message}"></h2> <!-- Dynamic message (score or error) -->
+
+        <a href="/api/dashboard" class="btn">Back to Dashboard</a> <!-- Optional: link to dashboard -->
+    </div>
+</body>
+</html>

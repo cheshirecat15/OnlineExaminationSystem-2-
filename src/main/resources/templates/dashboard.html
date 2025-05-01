@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <style>
+    .dashboard-box {
+      width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background: #f4f4f4;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .dashboard-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .extra-info {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-box">
+    <h2>Welcome, <span th:text="${username}">Username</span></h2>
+    
+    <a href="/api/exams" class="btn">Exams</a>
+    <a href="/api/previous-records?userId=1" class="btn">Previous Records</a> <!-- Optional: replace userId=1 with dynamic value -->
+
+    <div class="extra-info">
+      <p>Check your exams and previous scores. Stay ahead with your progress!</p>
+    </div>
+  </div>
+</body>
+</html>
